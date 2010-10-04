@@ -1,0 +1,7 @@
+config/database.yml
+config/git.yml
+nbproject
+tmp
+log
+
+
