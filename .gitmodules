@@ -13,3 +13,6 @@
 [submodule "vendor/extensions/spanish_language_pack"]
 	path = vendor/extensions/spanish_language_pack
 	url = git://github.com/cdamian/radiant-spanish_language_pack-extension.git
+[submodule "vendor/extensions/sns"]
+	path = vendor/extensions/sns
+	url = git://github.com/radiant/radiant-sns-extension.git

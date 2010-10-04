@@ -109,6 +109,20 @@ ActiveRecord::Schema.define(:version => 20091003095744) do
 
   add_index "snippets", ["name"], :name => "name", :unique => true
 
+  create_table "text_assets", :force => true do |t|
+    t.string   "class_name",    :limit => 25
+    t.string   "name",          :limit => 100
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.integer  "lock_version"
+    t.string   "filter_id",     :limit => 25
+  end
+
+  add_index "text_assets", ["name", "class_name"], :name => "index_text_assets_on_name_and_class_name"
+
   create_table "users", :force => true do |t|
     t.string   "name",          :limit => 100
     t.string   "email"
